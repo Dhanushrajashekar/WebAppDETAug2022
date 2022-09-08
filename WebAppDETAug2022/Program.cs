@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WebAppDETAug2022.Data;
+using WebAppDETAug2022.Servics;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton<IHelo, Helo1>();
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<WebAppDETAug2022Context>(options =>
