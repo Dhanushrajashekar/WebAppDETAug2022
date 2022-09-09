@@ -23,5 +23,11 @@ namespace MVCDemo.Controllers
             return View(pizzas);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
     }
 }
