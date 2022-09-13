@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MVCDemo.Filters;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVCDemo.Models
 {
@@ -17,6 +18,9 @@ namespace MVCDemo.Models
         public string toppings { get; set; }
 
         public string sauce { get; set; }
+
+
+     
     }
 
     public enum PizzaSize
