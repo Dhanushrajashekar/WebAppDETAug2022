@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ApiDemo.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ApiDemoContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ApiDemoContext") ?? throw new InvalidOperationException("Connection string 'ApiDemoContext' not found.")));
 
 // Add services to the container.
 
