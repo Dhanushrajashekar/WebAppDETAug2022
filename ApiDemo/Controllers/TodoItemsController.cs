@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Data;
-using TodoApi.Models;
+using APIDemo.Models;
+using ApiDemo.Data;
 
-namespace TodoApi.Controllers
+namespace ApiDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class TodoItemsController : ControllerBase
     {
-        private readonly TodoApiContext _context;
+        private readonly ApiDemoContext _context;
 
-        public TodoItemsController(TodoApiContext context)
+        public TodoItemsController(ApiDemoContext context)
         {
             _context = context;
         }
@@ -86,12 +86,14 @@ namespace TodoApi.Controllers
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
-         
+          if (_context.TodoItem == null)
+          {
+              return Problem("Entity set 'ApiDemoContext.TodoItem'  is null.");
+          }
             _context.TodoItem.Add(todoItem);
             await _context.SaveChangesAsync();
 
-           // return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
-            return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+            return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
         }
 
         // DELETE: api/TodoItems/5

@@ -11,9 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiDemo", "ApiDemo\ApiDemo.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoPizza", "ContosoPizza\ContosoPizza.csproj", "{664B362A-27E0-46CA-A844-9A11DD0B913D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApiClient", "ConsoleApiClient\ConsoleApiClient.csproj", "{76939C11-5028-4C23-B392-9F48B3AC9730}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{720CAC00-529E-4206-83E5-25FFCA130FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApiClient", "ConsoleApiClient\ConsoleApiClient.csproj", "{76939C11-5028-4C23-B392-9F48B3AC9730}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{76939C11-5028-4C23-B392-9F48B3AC9730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76939C11-5028-4C23-B392-9F48B3AC9730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76939C11-5028-4C23-B392-9F48B3AC9730}.Release|Any CPU.Build.0 = Release|Any CPU
-		{720CAC00-529E-4206-83E5-25FFCA130FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{720CAC00-529E-4206-83E5-25FFCA130FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{720CAC00-529E-4206-83E5-25FFCA130FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{720CAC00-529E-4206-83E5-25FFCA130FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
