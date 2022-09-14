@@ -1,4 +1,4 @@
-namespace TodoApi
+namespace ODataService
 {
     public class WeatherForecast
     {

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiDemo.Data;
 using ApiDemo.Models;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace ApiDemo.Controllers
 {
@@ -23,6 +24,7 @@ namespace ApiDemo.Controllers
 
         // GET: api/Users
         [HttpGet]
+        [EnableQuery]
         public async Task<ActionResult<IEnumerable<User>>> GetUser()
         {
           if (_context.User == null)

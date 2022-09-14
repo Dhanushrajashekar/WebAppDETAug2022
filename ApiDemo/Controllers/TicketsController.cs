@@ -2,6 +2,7 @@
 using ApiDemo.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace ApiDemo.Controllers
 {
@@ -10,6 +11,7 @@ namespace ApiDemo.Controllers
     public class TicketsController : ControllerBase
     {
         [HttpGet]
+        [EnableQuery]
         [Route("all")]
 
         public List<Ticket> Get()
