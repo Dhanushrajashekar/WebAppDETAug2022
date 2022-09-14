@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoPizza", "ContosoPizz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApiClient", "ConsoleApiClient\ConsoleApiClient.csproj", "{76939C11-5028-4C23-B392-9F48B3AC9730}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{EF5D7D30-2B8F-42A6-9F1B-51C4D04927F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTest", "BankTest\BankTest.csproj", "{DAF10B5E-682C-4682-A405-0AED62FB3187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{76939C11-5028-4C23-B392-9F48B3AC9730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76939C11-5028-4C23-B392-9F48B3AC9730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76939C11-5028-4C23-B392-9F48B3AC9730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5D7D30-2B8F-42A6-9F1B-51C4D04927F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5D7D30-2B8F-42A6-9F1B-51C4D04927F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5D7D30-2B8F-42A6-9F1B-51C4D04927F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5D7D30-2B8F-42A6-9F1B-51C4D04927F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF10B5E-682C-4682-A405-0AED62FB3187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF10B5E-682C-4682-A405-0AED62FB3187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF10B5E-682C-4682-A405-0AED62FB3187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF10B5E-682C-4682-A405-0AED62FB3187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
