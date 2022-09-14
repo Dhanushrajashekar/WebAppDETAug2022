@@ -1,24 +1,49 @@
-using Xunit;
+using System.Data;
+using MVCDemo.Models;
+using MVCDemo.Services;
 
-namespace MyFirstUnitTests
+
+
+namespace xUnitTestDemo
 {
     public class UnitTest1
     {
         [Fact]
-        public void PassingTest()
+        public void Test1()
         {
-            Assert.Equal(4, Add(2, 2));
-        }
+            Assert.Equal(PizzaServices.GetAll().Count, 2);
 
+
+
+        }
         [Fact]
-        public void FailingTest()
+        public void TestAddPizza()
         {
-            Assert.Equal(5, Add(2, 2));
-        }
+            Pizza p = new Pizza { Name = "Peri Peri Pizza", Size = PizzaSize.Medium, IsGlutenFree = true };
+            PizzaServices.Add(p);
+            Pizza verify = PizzaServices.Get(3);
 
-        int Add(int x, int y)
+
+
+            Assert.Equal(3, PizzaServices.GetAll().Count);
+            Assert.Equal(p.Id, verify.Id);
+        }
+        [Fact]
+        public void TestDelete()
         {
-            return x + y;
+            PizzaServices.Delete(3);
+            Assert.Equal(2, PizzaServices.GetAll().Count);
+        }
+        [Fact]
+        public void TestUpdate()
+        {
+            Pizza p = new Pizza { Id = 2, Name = "Mozeralla", Size = PizzaSize.Medium, IsGlutenFree = true };
+            PizzaServices.Update(p);
+            Pizza verify = PizzaServices.Get(2);
+            Assert.Equal(verify.Name, "Monzeralla");
         }
     }
+
+
+
 }
