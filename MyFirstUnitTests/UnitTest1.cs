@@ -40,7 +40,8 @@ namespace xUnitTestDemo
             Pizza p = new Pizza { Id = 2, Name = "Mozeralla", Size = PizzaSize.Medium, IsGlutenFree = true };
             PizzaServices.Update(p);
             Pizza verify = PizzaServices.Get(2);
-            Assert.Equal(verify.Name, "Monzeralla");
+            Assert.Equal("Monzeralla",
+                         verify.Name);
         }
     }
 
