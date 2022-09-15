@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Library.Api\LibraryApi.csproj" />
     <ProjectReference Include="..\MVCDemo\MVCDemo.csproj" />
   </ItemGroup>
 
